@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Conway's Game of Life</title>
+  <script src="GameOfLife.js"></script>
+  <style type="text/css">
+  	table {
+	    border-collapse: collapse;
+	    border: 1px solid black;
+	}
+
+	td {
+	    border: 1px solid black;
+	    width: 20px;
+	    height: 20px;
+	}
+	td.alive {
+		background-color: black;
+	}
+	td.dead {
+		background-color: white;
+	}
+  </style>
+</head>
+<body onload="registerEvents();">
+	<center>
+		<h2>Choose the size of your game</h2>
+		<form name="gameSize">
+			<label>Rows: <input type="number" name="nRows"></label> 
+			<label>Columns: <input type="number" name="nColumns"></label><br><br>
+			<input type="button" name="createGame" value="Create Game"><br>
+		</form>
+		<br><br>
+		<table id="gameTable">
+		</table>
+		<br>
+		<div id="endOfGameMessage" style="color:red;font-weight: bold"> </div><br>
+		<button id="startGame">Start Game</button> <button id="stopGame">Stop Game</button>
+	</center>
+</body>
+</html>
