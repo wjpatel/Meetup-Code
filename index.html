@@ -11,8 +11,8 @@
 
 	td {
 	    border: 1px solid black;
-	    width: 20px;
-	    height: 20px;
+	    width: 10px;
+	    height: 10px;
 	}
 	td.alive {
 		background-color: black;
@@ -24,18 +24,19 @@
 </head>
 <body onload="registerEvents();">
 	<center>
-		<h2>Choose the size of your game</h2>
+		<h3 id="instrcution1">Choose the size of your game.</h3>
 		<form name="gameSize">
 			<label>Rows: <input type="number" name="nRows"></label> 
 			<label>Columns: <input type="number" name="nColumns"></label><br><br>
 			<input type="button" name="createGame" value="Create Game"><br>
 		</form>
-		<br><br>
+		<br>
+		<h3 id="instruction2" hidden>Click the cells to bring them to life.</h3>
 		<table id="gameTable">
 		</table>
 		<br>
-		<div id="endOfGameMessage" style="color:red;font-weight: bold"> </div><br>
-		<button id="startGame">Start Game</button> <button id="stopGame">Stop Game</button>
+		<div id="gameStatusMessage" style="font-weight: bold"></div><br>
+		<button id="startGame" hidden>Start Game</button> <button id="stopGame" hidden>Stop Game</button>
 	</center>
 </body>
 </html>
